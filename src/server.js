@@ -21,9 +21,9 @@ app.use(bodyParse.json());
 // Globals Variables
 
 // Routes
-app.use('/', (req, res) => {
-  res.status(200).send("La API funciona correctamente\n");
-});
+app.use(require('./routes/posts'));
+app.use(require('./routes/users'));
+app.use(require('./routes/comments'));
 
 // Static Files
 
